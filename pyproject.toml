@@ -10,3 +10,19 @@ dependencies = [
     "matplotlib>=3.10.8",
     "scipy>=1.17.0",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.format]
+quote-style = "double"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.14",
+]

@@ -1,0 +1,99 @@
+\documentclass[11pt, a4paper]{article}
+
+% ============================================================================
+% Typography
+% ============================================================================
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext}          % Palatino text
+\usepackage{newpxmath}          % Palatino math
+\usepackage{microtype}          % Refined typography (tracking, kerning, spacing)
+
+% ============================================================================
+% Layout
+% ============================================================================
+\usepackage[margin=1.25in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% ============================================================================
+% Figures and Tables
+% ============================================================================
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}           % Professional tables
+\usepackage{subcaption}         % Subfigures
+\usepackage[font=small, labelfont=bf, labelsep=period]{caption}
+
+% Graphics path
+\graphicspath{{figures/}}
+
+% ============================================================================
+% Math and Science
+% ============================================================================
+% Note: amsmath is loaded by newpxmath; amssymb conflicts with newpxmath
+\usepackage{siunitx}            % SI units
+
+% ============================================================================
+% References and Links
+% ============================================================================
+\usepackage[numbers, sort&compress]{natbib}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+
+% ============================================================================
+% Section Styling
+% ============================================================================
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{1ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1ex plus 0.3ex minus 0.2ex}{0.5ex plus 0.1ex}
+
+% ============================================================================
+% Abstract Styling
+% ============================================================================
+\renewenvironment{abstract}{%
+    \small
+    \begin{center}
+        \textbf{\abstractname}
+    \end{center}
+    \itshape
+    \begin{quotation}
+}{%
+    \end{quotation}
+}
+
+% ============================================================================
+% Document Information
+% ============================================================================
+\title{\textbf{Slow Dynamics and High Variability in Clustered Networks}\\[0.5ex]
+       \large A Reproduction Study with Extensions}
+\author{Author One\thanks{Berlin Center for Computational Neuroscience} \and 
+        Author Two\footnotemark[1]}
+\date{\today}
+
+% ============================================================================
+% Document
+% ============================================================================
+\begin{document}
+
+\maketitle
+
+\input{sections/abstract}
+
+\input{sections/introduction}
+
+\input{sections/model}
+
+\input{sections/results}
+
+\input{sections/extensions}
+
+\input{sections/discussion}
+
+% ============================================================================
+% References
+% ============================================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

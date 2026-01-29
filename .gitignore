@@ -1,0 +1,10 @@
+# Brian2 cpp_standalone build directories
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
