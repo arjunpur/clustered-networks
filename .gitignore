@@ -1,5 +1,6 @@
 # Brian2 cpp_standalone build directories
 build/
+saved_runs/
 
 # Python
 __pycache__/
