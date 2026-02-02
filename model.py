@@ -57,8 +57,9 @@ class ModelParams:
         # Simulation parameters
         dt=0.1 * ms,  # integration timestep
         analysis_start_t=1.5 * second,  # time to start statistical analysis
-        analysis_window_t=1.5 * second,  # time window to perform statistical analysis
+        analysis_window_t=1.5 * second,  # time window for correlation analysis
         fano_factor_window_t=100 * ms,
+        firing_rate_window_t=1.5 * second,  # time window for firing rate analysis
         duration=3 * second,  # simulation duration
         # Plotting
         voltage_scale=15 * volt,  # for converting to physical units
@@ -86,6 +87,7 @@ class ModelParams:
         self.analysis_start_t = analysis_start_t
         self.analysis_window_t = analysis_window_t
         self.fano_factor_window_t = fano_factor_window_t
+        self.firing_rate_window_t = firing_rate_window_t
         self.duration = duration
         self.voltage_scale = voltage_scale
 
