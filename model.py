@@ -63,6 +63,8 @@ class ModelParams:
         duration=3 * second,  # simulation duration
         # Plotting
         voltage_scale=15 * volt,  # for converting to physical units
+        stimulus_multipliers=np.array([]),
+        stimulus_time=(0,0),
     ):
         self.N_E = N_E
         self.N_I = N_I
@@ -90,6 +92,8 @@ class ModelParams:
         self.firing_rate_window_t = firing_rate_window_t
         self.duration = duration
         self.voltage_scale = voltage_scale
+        self.stimulus_multipliers = stimulus_multipliers
+        self.stimulus_time = stimulus_time
 
     @property
     def N_total(self):
@@ -290,7 +294,19 @@ class NeuronNetwork:
         self.network.restore("initial")  # On every run call, restore initial configuration
         if randomize_initial:
             self._randomize_initial_conditions()
-        self.network.run(self.params.duration)
+
+        if len(self.params.stimulus_multipliers) == 0:
+            self.network.run(self.params.duration)
+        else:
+            start = self.params.stimulus_time[0]
+            end = self.params.stimulus_time[1]
+            self.network.run(start)
+            self.E.mu *= self.params.stimulus_multipliers
+
+            self.network.run(end-start)
+            self.E.mu /= self.params.stimulus_multipliers
+
+            self.network.run(self.params.duration-end)
 
     def restore(self):
         self.network.restore("initial")
