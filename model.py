@@ -238,7 +238,6 @@ class NeuronNetwork:
             S_ee = Synapses(E, E, "w: 1", on_pre="x_post += w/tau_1", dt=params.dt)
 
             # No clustering: uniform connectivity
-            E.cluster_id = 0  # all neurons in "cluster 0"
             S_ee.connect(condition="i != j", p=params.p_conn_e)
             S_ee.w = j_ee
 
