@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 FEB 2026 11:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 FEB 2026 12:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -777,17 +777,17 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 4.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 9.
-) (./sections/model.tex
+) (./sections/results.tex) (./sections/discussion.tex
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc}]) (./sections/results.tex) (./sections/extensions.tex) (./sections/discussion.tex) (./main.bbl
-
-[2]
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc}]) (./sections/extensions.tex) (./sections/model.tex) (./main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 )
+
+[2]
 
 [3] (./main.aux)
  ***********
@@ -795,21 +795,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D62668C4FB2CAE25327ABF559C06103B;2621.
+(rerunfilecheck)             Checksum: 7A47A2BFD45312321F45A077449F013A;2527.
  ) 
 Here is how much of TeX's memory you used:
- 22351 strings out of 473190
- 408568 string characters out of 5715801
+ 22349 strings out of 473190
+ 408548 string characters out of 5715801
  785525 words of memory out of 5000000
- 45227 multiletter control sequences out of 15000+600000
+ 45226 multiletter control sequences out of 15000+600000
  622386 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,11n,131p,1054b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,11n,131p,1054b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (3 pages, 108553 bytes).
+Output written on main.pdf (3 pages, 108105 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 31913 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 31905 words of extra memory for PDF output out of 35830 (max. 10000000)
 
