@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 FEB 2026 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 FEB 2026 11:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -798,15 +798,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D62668C4FB2CAE25327ABF559C06103B;2621.
  ) 
 Here is how much of TeX's memory you used:
- 22347 strings out of 473190
- 408490 string characters out of 5715801
- 784515 words of memory out of 5000000
+ 22351 strings out of 473190
+ 408568 string characters out of 5715801
+ 785525 words of memory out of 5000000
  45227 multiletter control sequences out of 15000+600000
- 622150 words of font info for 135 fonts, out of 8000000 for 9000
+ 622386 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,11n,131p,1054b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on main.pdf (3 pages, 106663 bytes).
+Output written on main.pdf (3 pages, 108553 bytes).
 PDF statistics:
  132 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
