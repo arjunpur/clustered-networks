@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  5 FEB 2026 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  5 FEB 2026 13:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -526,54 +526,60 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 12.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 12.
+<figures/rasters_uniform.pdf, id=52, 566.4933pt x 443.44421pt>
+File: figures/rasters_uniform.pdf Graphic file (type pdf)
+<use figures/rasters_uniform.pdf>
+Package pdftex.def Info: figures/rasters_uniform.pdf  used on input line 21.
+(pdftex.def)             Requested size: 235.51768pt x 184.35747pt.
+<figures/rasters_clustered.pdf, id=53, 566.4933pt x 443.44421pt>
+File: figures/rasters_clustered.pdf Graphic file (type pdf)
+<use figures/rasters_clustered.pdf>
+Package pdftex.def Info: figures/rasters_clustered.pdf  used on input line 29.
+(pdftex.def)             Requested size: 235.51768pt x 184.35747pt.
 
 
-<figures/firing_rate_distribution.pdf, id=85, 522.29816pt x 360.44975pt>
-File: figures/firing_rate_distribution.pdf Graphic file (type pdf)
-<use figures/firing_rate_distribution.pdf>
-Package pdftex.def Info: figures/firing_rate_distribution.pdf  used on input line 32.
-(pdftex.def)             Requested size: 235.51768pt x 162.53088pt.
-<figures/fano_factor_distribution.pdf, id=88, 403.25343pt x 328.01295pt>
-File: figures/fano_factor_distribution.pdf Graphic file (type pdf)
-<use figures/fano_factor_distribution.pdf>
-Package pdftex.def Info: figures/fano_factor_distribution.pdf  used on input line 53.
-(pdftex.def)             Requested size: 235.51768pt x 191.57397pt.
-<figures/fano_factor_vs_window.pdf, id=89, 504.73254pt x 344.71599pt>
-File: figures/fano_factor_vs_window.pdf Graphic file (type pdf)
-<use figures/fano_factor_vs_window.pdf>
-Package pdftex.def Info: figures/fano_factor_vs_window.pdf  used on input line 63.
-(pdftex.def)             Requested size: 235.51768pt x 160.85408pt.
 
 
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
- <./figures/firing_rate_distribution.pdf>]
-<figures/correlation_all_pairs.pdf, id=112, 400.24219pt x 339.77565pt>
+ <./figures/rasters_uniform.pdf> <./figures/rasters_clustered.pdf>]
+<figures/firing_rate_distribution.pdf, id=91, 522.29816pt x 360.44975pt>
+File: figures/firing_rate_distribution.pdf Graphic file (type pdf)
+<use figures/firing_rate_distribution.pdf>
+Package pdftex.def Info: figures/firing_rate_distribution.pdf  used on input line 48.
+(pdftex.def)             Requested size: 235.51768pt x 162.53088pt.
+<figures/fano_factor_distribution.pdf, id=94, 403.25343pt x 328.01295pt>
+File: figures/fano_factor_distribution.pdf Graphic file (type pdf)
+<use figures/fano_factor_distribution.pdf>
+Package pdftex.def Info: figures/fano_factor_distribution.pdf  used on input line 69.
+(pdftex.def)             Requested size: 235.51768pt x 191.57397pt.
+<figures/fano_factor_vs_window.pdf, id=95, 504.73254pt x 344.71599pt>
+File: figures/fano_factor_vs_window.pdf Graphic file (type pdf)
+<use figures/fano_factor_vs_window.pdf>
+Package pdftex.def Info: figures/fano_factor_vs_window.pdf  used on input line 79.
+(pdftex.def)             Requested size: 235.51768pt x 160.85408pt.
+
+
+<figures/correlation_all_pairs.pdf, id=98, 400.24219pt x 339.77565pt>
 File: figures/correlation_all_pairs.pdf Graphic file (type pdf)
 <use figures/correlation_all_pairs.pdf>
-Package pdftex.def Info: figures/correlation_all_pairs.pdf  used on input line 88.
+Package pdftex.def Info: figures/correlation_all_pairs.pdf  used on input line 104.
 (pdftex.def)             Requested size: 235.51768pt x 199.93706pt.
-<figures/correlation_same_cluster.pdf, id=113, 390.9575pt x 339.77565pt>
+<figures/correlation_same_cluster.pdf, id=99, 390.9575pt x 339.77565pt>
 File: figures/correlation_same_cluster.pdf Graphic file (type pdf)
 <use figures/correlation_same_cluster.pdf>
-Package pdftex.def Info: figures/correlation_same_cluster.pdf  used on input line 97.
+Package pdftex.def Info: figures/correlation_same_cluster.pdf  used on input line 113.
 (pdftex.def)             Requested size: 235.51768pt x 204.68611pt.
 
 
-<figures/fano_factor_vs_ree.pdf, id=114, 566.44313pt x 348.82445pt>
+[2 <./figures/firing_rate_distribution.pdf> <./figures/fano_factor_distribution.pdf> <./figures/fano_factor_vs_window.pdf>]
+<figures/fano_factor_vs_ree.pdf, id=134, 566.44313pt x 348.82445pt>
 File: figures/fano_factor_vs_ree.pdf Graphic file (type pdf)
 <use figures/fano_factor_vs_ree.pdf>
-Package pdftex.def Info: figures/fano_factor_vs_ree.pdf  used on input line 125.
+Package pdftex.def Info: figures/fano_factor_vs_ree.pdf  used on input line 141.
 (pdftex.def)             Requested size: 235.51768pt x 145.03622pt.
-) (./sections/discussion.tex
-
-[2 <./figures/fano_factor_distribution.pdf> <./figures/fano_factor_vs_window.pdf> <./figures/correlation_all_pairs.pdf> <./figures/correlation_same_cluster.pdf>]) (./sections/extensions.tex) (./sections/model.tex
-Underfull \hbox (badness 7704) in paragraph at lines 15--16
-\T1/ppl/m/n/10 (+20) Membrane po-ten-tial dy-nam-ics fol-low a leaky
- []
-
-) (./main.bbl
+) (./sections/discussion.tex) (./sections/methods.tex) (./main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
@@ -581,29 +587,27 @@ Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 
 
-[3
-
- <./figures/fano_factor_vs_ree.pdf>] (./main.aux)
+[3 <./figures/correlation_all_pairs.pdf> <./figures/correlation_same_cluster.pdf> <./figures/fano_factor_vs_ree.pdf>] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B590856D52E773336E0D5BDFD6378C69;2507.
+(rerunfilecheck)             Checksum: 1E403C27DDD4A7A20109A7F3B887B56E;1477.
  ) 
 Here is how much of TeX's memory you used:
- 15238 strings out of 473190
- 241706 string characters out of 5715801
- 677338 words of memory out of 5000000
- 38014 multiletter control sequences out of 15000+600000
- 606021 words of font info for 255 fonts, out of 8000000 for 9000
+ 15230 strings out of 473190
+ 241971 string characters out of 5715801
+ 673574 words of memory out of 5000000
+ 38024 multiletter control sequences out of 15000+600000
+ 605544 words of font info for 249 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,1054b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,1054b,461s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (3 pages, 147196 bytes).
+Output written on main.pdf (3 pages, 1052296 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 65727 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 65673 words of extra memory for PDF output out of 74296 (max. 10000000)
 
