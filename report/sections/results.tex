@@ -6,14 +6,107 @@
 
 We present our reproduction of the key findings from the original study.
 
-\subsection{Homogeneous Network Baseline}
+\subsection{Metastable Dynamics in Clustered Networks}
+\label{sec:metastable}
 
-Networks without clustering exhibit stationary activity with low variability.
+An excitatory-inhibitory (E/I) network with clustered E$\to$E connectivity produces
+metastable ``high'' firing activity states within clusters that are stable yet quick to
+transition. These high activity states persist for hundreds of milliseconds to seconds
+before switching, leading to slow rate dynamics and elevated trial-to-trial spike count
+variability (super-Poisson) compared to unclustered networks.
 
-\subsection{Clustered Network Dynamics}
+\subsubsection{Timescales}
+\label{sec:timescales}
 
-Introducing clustering produces slow fluctuations through transient cluster activations.
+Clustered networks exhibit substantially longer correlation times than unstructured
+networks. The autocovariance function decays much more slowly as a function of lag in
+clustered networks compared to their unstructured counterparts. Similarly, the
+cross-covariance for within-cluster neuron pairs decays slowly, indicating a shared
+correlated rate change among neurons belonging to the same cluster.
 
-\subsection{Quantitative Measures}
+% TODO: Add autocovariance figure when available
 
-We quantify temporal structure using Fano factor and autocorrelation analysis.
+\subsubsection{Variability}
+\label{sec:variability}
+
+Neurons in the clustered network exhibit Fano factors greater than one
+(``super-Poisson'' spike count variability), which increase with the size of the
+counting window. This pattern illustrates the presence of slow firing rate variability
+in clustered networks.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{fano_factor_distribution}
+    \caption{Distribution of Fano factors across neurons for uniform and clustered
+    networks. The clustered network exhibits a broader distribution with a higher mean
+    (dashed lines), indicating greater spike count variability.}
+    \label{fig:fano_distribution}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{fano_factor_vs_window}
+    \caption{Mean Fano factor as a function of counting window size. In the clustered
+    network, the Fano factor increases with window size, reflecting slow rate
+    fluctuations. The uniform network remains near the Poisson baseline (FF = 1).}
+    \label{fig:fano_vs_window}
+\end{figure}
+
+\subsubsection{Correlations}
+\label{sec:correlations}
+
+Pairwise spike count correlations remain near zero on average for both network types.
+However, in the clustered network, within-cluster neuron pairs show a heavier positive
+tail in the distribution of correlation coefficients. This observation is consistent
+with the notion that clusters undergo additional correlated firing rate
+transitions---switching between high and low activity states---when examined across
+temporal windows spanning the simulation. Furthermore, this positive tail becomes
+increasingly pronounced as the counting window size increases, as expected given that
+within-cluster neurons share these slow rate fluctuations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{correlation_coefficients}
+    \caption{Distribution of pairwise spike count correlations for all neuron pairs
+    (left) and within-cluster pairs only (right). While correlations remain centered
+    near zero on average, within-cluster pairs in the clustered network show a heavy
+    positive tail that increases with counting window size (50 ms vs.\ 100 ms).}
+    \label{fig:correlations}
+\end{figure}
+
+\subsubsection{Mean Rate}
+\label{sec:mean_rate}
+
+Despite the switching between high and low firing states, the clustered network
+exhibits a low mean firing rate similar to that of the unstructured network. This is
+likely due to additional suppression within the network during high firing activity
+states. The high activity epochs in clustered networks do not alter the overall mean
+firing rate; however, the firing rate distribution broadens somewhat, likely reflecting
+the alternation between high and low activity states.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{firing_rate_distribution}
+    \caption{Distribution of firing rates for excitatory neurons in uniform and
+    clustered networks. Both networks maintain low mean firing rates, though the
+    clustered network shows a broader distribution reflecting the alternation between
+    high and low activity states.}
+    \label{fig:firing_rates}
+\end{figure}
+
+% ============================================================================
+% Claim 3: Critical Cluster Strength
+% ============================================================================
+\subsection{Critical Cluster Strength}
+\label{sec:critical_ree}
+
+% TODO: Add Claim 3 content describing the critical R_EE value for clustering
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{fano_factor_vs_ree}
+    \caption{Mean Fano factor as a function of cluster strength ($R_{EE}$). As
+    within-cluster connection strength increases, the network transitions from
+    Poisson-like variability to super-Poisson variability.}
+    \label{fig:fano_vs_ree}
+\end{figure}
