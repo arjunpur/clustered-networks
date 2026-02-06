@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  5 FEB 2026 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  6 FEB 2026 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -529,12 +529,12 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 <figures/rasters_uniform.pdf, id=52, 566.4933pt x 443.44421pt>
 File: figures/rasters_uniform.pdf Graphic file (type pdf)
 <use figures/rasters_uniform.pdf>
-Package pdftex.def Info: figures/rasters_uniform.pdf  used on input line 21.
+Package pdftex.def Info: figures/rasters_uniform.pdf  used on input line 23.
 (pdftex.def)             Requested size: 235.51768pt x 184.35747pt.
 <figures/rasters_clustered.pdf, id=53, 566.4933pt x 443.44421pt>
 File: figures/rasters_clustered.pdf Graphic file (type pdf)
 <use figures/rasters_clustered.pdf>
-Package pdftex.def Info: figures/rasters_clustered.pdf  used on input line 29.
+Package pdftex.def Info: figures/rasters_clustered.pdf  used on input line 30.
 (pdftex.def)             Requested size: 235.51768pt x 184.35747pt.
 
 
@@ -544,48 +544,48 @@ Package pdftex.def Info: figures/rasters_clustered.pdf  used on input line 29.
 
 
  <./figures/rasters_uniform.pdf> <./figures/rasters_clustered.pdf>]
-<figures/firing_rate_distribution.pdf, id=91, 522.29816pt x 360.44975pt>
+<figures/firing_rate_distribution.pdf, id=89, 522.29816pt x 360.44975pt>
 File: figures/firing_rate_distribution.pdf Graphic file (type pdf)
 <use figures/firing_rate_distribution.pdf>
-Package pdftex.def Info: figures/firing_rate_distribution.pdf  used on input line 48.
+Package pdftex.def Info: figures/firing_rate_distribution.pdf  used on input line 52.
 (pdftex.def)             Requested size: 235.51768pt x 162.53088pt.
-<figures/fano_factor_distribution.pdf, id=94, 403.25343pt x 328.01295pt>
+<figures/fano_factor_distribution.pdf, id=92, 403.25343pt x 328.01295pt>
 File: figures/fano_factor_distribution.pdf Graphic file (type pdf)
 <use figures/fano_factor_distribution.pdf>
-Package pdftex.def Info: figures/fano_factor_distribution.pdf  used on input line 69.
+Package pdftex.def Info: figures/fano_factor_distribution.pdf  used on input line 73.
 (pdftex.def)             Requested size: 235.51768pt x 191.57397pt.
-<figures/fano_factor_vs_window.pdf, id=95, 504.73254pt x 344.71599pt>
+<figures/fano_factor_vs_window.pdf, id=93, 504.73254pt x 344.71599pt>
 File: figures/fano_factor_vs_window.pdf Graphic file (type pdf)
 <use figures/fano_factor_vs_window.pdf>
-Package pdftex.def Info: figures/fano_factor_vs_window.pdf  used on input line 79.
+Package pdftex.def Info: figures/fano_factor_vs_window.pdf  used on input line 83.
 (pdftex.def)             Requested size: 235.51768pt x 160.85408pt.
 
 
-<figures/correlation_all_pairs.pdf, id=98, 400.24219pt x 339.77565pt>
+<figures/correlation_all_pairs.pdf, id=96, 400.24219pt x 339.77565pt>
 File: figures/correlation_all_pairs.pdf Graphic file (type pdf)
 <use figures/correlation_all_pairs.pdf>
-Package pdftex.def Info: figures/correlation_all_pairs.pdf  used on input line 104.
+Package pdftex.def Info: figures/correlation_all_pairs.pdf  used on input line 108.
 (pdftex.def)             Requested size: 235.51768pt x 199.93706pt.
-<figures/correlation_same_cluster.pdf, id=99, 390.9575pt x 339.77565pt>
+<figures/correlation_same_cluster.pdf, id=97, 390.9575pt x 339.77565pt>
 File: figures/correlation_same_cluster.pdf Graphic file (type pdf)
 <use figures/correlation_same_cluster.pdf>
-Package pdftex.def Info: figures/correlation_same_cluster.pdf  used on input line 113.
+Package pdftex.def Info: figures/correlation_same_cluster.pdf  used on input line 117.
 (pdftex.def)             Requested size: 235.51768pt x 204.68611pt.
 
 
 [2 <./figures/firing_rate_distribution.pdf> <./figures/fano_factor_distribution.pdf> <./figures/fano_factor_vs_window.pdf>]
-<figures/fano_factor_vs_ree.pdf, id=134, 566.44313pt x 348.82445pt>
+<figures/fano_factor_vs_ree.pdf, id=133, 566.44313pt x 348.82445pt>
 File: figures/fano_factor_vs_ree.pdf Graphic file (type pdf)
 <use figures/fano_factor_vs_ree.pdf>
-Package pdftex.def Info: figures/fano_factor_vs_ree.pdf  used on input line 141.
+Package pdftex.def Info: figures/fano_factor_vs_ree.pdf  used on input line 146.
 (pdftex.def)             Requested size: 235.51768pt x 145.03622pt.
-) (./sections/discussion.tex) (./sections/methods.tex) (./main.bbl
+) (./sections/discussion.tex) (./sections/methods.tex
+
+) (./main.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 )
-
-
 
 [3 <./figures/correlation_all_pairs.pdf> <./figures/correlation_same_cluster.pdf> <./figures/fano_factor_vs_ree.pdf>] (./main.aux)
  ***********
@@ -596,18 +596,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1E403C27DDD4A7A20109A7F3B887B56E;1477.
  ) 
 Here is how much of TeX's memory you used:
- 15230 strings out of 473190
- 241971 string characters out of 5715801
- 673574 words of memory out of 5000000
- 38024 multiletter control sequences out of 15000+600000
- 605544 words of font info for 249 fonts, out of 8000000 for 9000
+ 15261 strings out of 473190
+ 242407 string characters out of 5715801
+ 674695 words of memory out of 5000000
+ 38038 multiletter control sequences out of 15000+600000
+ 608478 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,1054b,461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,1054b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (3 pages, 1052296 bytes).
+Output written on main.pdf (3 pages, 1054229 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 65673 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 71817 words of extra memory for PDF output out of 74296 (max. 10000000)
 

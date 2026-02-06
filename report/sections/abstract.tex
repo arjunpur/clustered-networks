@@ -2,8 +2,18 @@
 % Abstract
 % ============================================================================
 \begin{abstract}
-This report reproduces the key findings of Litwin-Kumar and Doiron (2012) on slow dynamics in clustered cortical networks.
-We implement a network of leaky-integrate-and-fire neurons with increased connection probabilities based on neurons
-cluster assignment. We examine the effects of clustering on the network's firing patterns through measures like Fano factor, 
-correlation coefficients, and firing rate distributions. 
+    This report reproduces the key findings from Litwin-Kumar and Doiron
+    (2012) on the slow dynamics and variability in clustered spiking
+    networks. We implement their clustered network model and show that
+    potentiated within-cluster connectivity introduces metastable firing
+    states within the clusters. Using analyses from the original paper, we
+    identify slow firing-rate fluctuations (via long-timescale decays in
+    spike-count autocorrelation), higher trial-to-trial spike-count
+    variability (via super-Poisson Fano Factors), and weak average pairwise
+    correlations with a slightly elevated tail for within-cluster neurons.
+    We also reproduce stimulus-quenched spiking variability. These results
+    support the original paper's finding that clustered excitatory
+    connections are sufficient to generate slow firing-rate fluctuations
+    and stimulus-quenched variability in LIF networks---features also seen
+    in cortical recordings.
 \end{abstract}

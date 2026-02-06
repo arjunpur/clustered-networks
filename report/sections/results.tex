@@ -16,19 +16,23 @@ hundreds of milliseconds to seconds before switching, leading to slow rate
 dynamics and elevated trial-to-trial spike count variability (super-Poisson)
 compared to unclustered networks.
 
-\begin{figure}[t]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=\columnwidth]{rasters_uniform}
-    \caption{Spike rasters from a uniform (unclustered) network across
-    multiple trials.}
-    \label{fig:rasters_uniform}
-\end{figure}
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\columnwidth]{rasters_clustered}
-    \caption{Spike rasters from a clustered network across multiple trials.}
-    \label{fig:rasters_clustered}
+    \begin{subfigure}[t]{\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{rasters_uniform}
+        \caption{Uniform (unclustered) network.}
+        \label{fig:rasters_uniform}
+    \end{subfigure}
+    \vspace{0.5em}
+    \begin{subfigure}[t]{\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{rasters_clustered}
+        \caption{Clustered network.}
+        \label{fig:rasters_clustered}
+    \end{subfigure}
+    \caption{Spike rasters across multiple trials.}
+    \label{fig:rasters}
 \end{figure}
 
 \FloatBarrier
@@ -117,6 +121,7 @@ that within-cluster neurons share these slow rate fluctuations.
     \label{fig:correlations_cluster}
 \end{figure}
 
+\FloatBarrier
 \subsubsection{Timescales}
 \label{sec:timescales}
 

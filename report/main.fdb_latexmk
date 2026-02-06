@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1770296246.57701 "main.aux" "main.bbl" "main" 1770296247.67027 0
+["bibtex main"] 1770393875.96347 "main.aux" "main.bbl" "main" 1770393876.94074 0
   "./references.bib" 1769711578.60405 1249 9b93eb1697c5b575747836cae7dec164 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1770296247.36634 6854 b775cdf35b2b2adb306fed4329c0e607 "pdflatex"
+  "main.aux" 1770393876.67564 6817 77c45ada8e41ee65ffbdc78a2ff473dd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1770296246.71411 "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" "main.pdf" "main" 1770296247.67041 0
-  "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" 1770296223.71501 3947 ce5397b48f9d763048affbfb342d0f14 ""
+["pdflatex"] 1770393876.07152 "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" "main.pdf" "main" 1770393876.94088 0
+  "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" 1770393413.19381 3957 087c6cf7559a8554b4efd7e7a15e9027 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -128,15 +128,15 @@
   "figures/firing_rate_distribution.pdf" 1770291948.21741 14081 2795b60dced5266922fbd05b56b23171 ""
   "figures/rasters_clustered.pdf" 1770291973.77317 556554 da9af6b4aa8b4a285e297ccecde62ce6 ""
   "figures/rasters_uniform.pdf" 1770291972.86971 354105 aef75d86c92ea31ef0f92bb5aaf9b583 ""
-  "main.aux" 1770296247.36634 6854 b775cdf35b2b2adb306fed4329c0e607 "pdflatex"
-  "main.bbl" 1770296246.71158 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
-  "main.out" 1770296247.36703 1477 1e403c27ddd4a7a20109a7f3b887b56e "pdflatex"
-  "main.tex" 1770296223.71501 3947 ce5397b48f9d763048affbfb342d0f14 ""
-  "sections/abstract.tex" 1770117379.89799 624 a81ed51b9b91d108c6c2d0ef2fa86c46 ""
+  "main.aux" 1770393876.67564 6817 77c45ada8e41ee65ffbdc78a2ff473dd "pdflatex"
+  "main.bbl" 1770393876.06921 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
+  "main.out" 1770393876.67695 1477 1e403c27ddd4a7a20109a7f3b887b56e "pdflatex"
+  "main.tex" 1770393413.19381 3957 087c6cf7559a8554b4efd7e7a15e9027 ""
+  "sections/abstract.tex" 1770393061.25218 1172 6f9fe0e62d10192ff74b0a07c3b04b4b ""
   "sections/discussion.tex" 1770296224.63798 221 c6bd977dc77304594b445b49c7b29bfc ""
   "sections/introduction.tex" 1770130738.47825 1281 1c3cd382ac249b29ee8d4d8928454d33 ""
   "sections/methods.tex" 1770296226.5938 300 56e1816a760050cd7e337abd0dfc426d ""
-  "sections/results.tex" 1770296245.23059 6133 1c88b56ebef83598b534bbce67f107a6 ""
+  "sections/results.tex" 1770393874.67326 6284 7eea3a32404d2d5fc1bc578bef261d2a ""
   (generated)
   "main.aux"
   "main.log"
