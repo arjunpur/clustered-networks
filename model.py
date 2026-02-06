@@ -213,7 +213,7 @@ class NeuronNetwork:
 
             # Connect with different probabilities based on cluster membership
             S_ee_in.connect(
-                condition="i // cluster_size == j // cluster_size",
+                condition="i // cluster_size == j // cluster_size and i != j",
                 p="p_in",
                 namespace={
                     "p_in": p_in,
