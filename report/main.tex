@@ -1,19 +1,18 @@
-\documentclass[11pt, a4paper]{article}
+\documentclass[10pt, a4paper, twocolumn]{article}
 
 % ============================================================================
 % Typography
 % ============================================================================
 \usepackage[T1]{fontenc}
-\usepackage{newpxtext}          % Palatino text
-\usepackage{newpxmath}          % Palatino math
+\usepackage{mathpazo}           % Palatino text and math
 \usepackage{microtype}          % Refined typography (tracking, kerning, spacing)
 
 % ============================================================================
 % Layout
 % ============================================================================
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=0.75in, columnsep=0.25in]{geometry}
 \usepackage{setspace}
-\onehalfspacing
+\singlespacing
 
 % ============================================================================
 % Figures and Tables
@@ -23,15 +22,25 @@
 \usepackage{booktabs}           % Professional tables
 \usepackage{subcaption}         % Subfigures
 \usepackage[font=small, labelfont=bf, labelsep=period]{caption}
+\usepackage{placeins}           % For \FloatBarrier
 
 % Graphics path
 \graphicspath{{figures/}}
 
+% Float parameters - keep figures near their text
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.7}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{5}
+
 % ============================================================================
 % Math and Science
 % ============================================================================
-% Note: amsmath is loaded by newpxmath; amssymb conflicts with newpxmath
-\usepackage{siunitx}            % SI units
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 % ============================================================================
 % References and Links
@@ -49,27 +58,24 @@
 \titlespacing*{\subsection}{0pt}{1ex plus 0.3ex minus 0.2ex}{0.5ex plus 0.1ex}
 
 % ============================================================================
-% Abstract Styling
+% Abstract Styling (for two-column layout)
 % ============================================================================
 \renewenvironment{abstract}{%
     \small
-    \begin{center}
-        \textbf{\abstractname}
-    \end{center}
+    \noindent\textbf{\abstractname.}
     \itshape
-    \begin{quotation}
 }{%
-    \end{quotation}
+    \par\vspace{1em}
 }
 
 % ============================================================================
 % Document Information
 % ============================================================================
 \title{\textbf{Slow Dynamics and High Variability in Clustered Networks}\\[0.5ex]
-       \large A Reproduction Study with Extensions}
-\author{Arjun Puri\thanks{Berlin Center for Computational Neuroscience, alphabetical order} \and 
-        Johan Kirikal\footnotemark[1] \and
-        Shuo Wang\footnotemark[1]}
+       \large Reproduction of Litwin-Kumar and Doiron (2012)}
+\author{Arjun Puri$^{*}$ \and Johan Kirikal$^{*}$ \and Shuo Wang$^{*}$
+        \thanks{$^{*}$Berlin Center for Computational Neuroscience;
+        authors listed in alphabetical order}}
 \date{\today}
 
 % ============================================================================
@@ -77,19 +83,21 @@
 % ============================================================================
 \begin{document}
 
-\maketitle
-
-\input{sections/abstract}
+\twocolumn[
+    \begin{@twocolumnfalse}
+        \maketitle
+        \input{sections/abstract}
+        \vspace{1em}
+    \end{@twocolumnfalse}
+]
 
 \input{sections/introduction}
 
-\input{sections/model}
-
 \input{sections/results}
 
-\input{sections/extensions}
-
 \input{sections/discussion}
+
+\input{sections/methods}
 
 % ============================================================================
 % References

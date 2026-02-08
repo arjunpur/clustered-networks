@@ -4,16 +4,20 @@
 \section{Introduction}
 \label{sec:introduction}
 
-Cortical networks exhibit slow temporal dynamics and high trial-to-trial variability that are difficult to explain with classical balanced network models.
+Cortical networks are often modeled as unstructured, randomly
+connected networks with balanced excitation and inhibition. This balance can
+place the network in an irregular, asynchronous regime in which neurons
+exhibit high trial-to-trial variability in spike timing. In this regime,
+excitation and inhibition are large but cancel in the mean. Thus, spikes are
+often fluctuation-driven, resulting in high spike-time variability.
 
-\subsection{Background}
+However, cortical networks also exhibit slower, population-level changes in
+firing rate over longer timescales (hundreds of milliseconds to seconds).
+Baseline, unstructured, balanced excitation-inhibition networks do not
+typically capture these slower fluctuations in firing rate.
 
-The balance between excitation and inhibition is a fundamental organizing principle of cortical circuits.
-
-\subsection{The Clustering Hypothesis}
-
-Clustered connectivity within excitatory populations can generate slow dynamics through metastable attractor states.
-
-\subsection{Objectives}
-
-We aim to reproduce the core findings of the original study and explore extensions to the model.
+In this study, we find that introducing clustered excitatory connectivity
+creates slow dynamics. Clusters transition between states of high and low
+firing, such that neurons exhibit both high spike-time variability and slow
+firing-rate fluctuations. Introducing stimuli can bias the network toward
+particular activity states, reducing variability.

@@ -1,7 +1,7 @@
 [project]
 name = "clustered-networks"
 version = "0.1.0"
-description = "Add your description here"
+description = "Slow dynamics and high variability in networks with clustered connections"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -21,8 +21,3 @@ line-length = 88
 
 [tool.ruff.format]
 quote-style = "double"
-
-[dependency-groups]
-dev = [
-    "ruff>=0.14.14",
-]
