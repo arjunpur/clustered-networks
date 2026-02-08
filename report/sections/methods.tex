@@ -4,10 +4,47 @@
 \section{Methods}
 \label{sec:methods}
 
+Our aim in this project was to study how clusters in an artificial neural network model influence its dynamics. For clarity, we divide this goal into three main parts: model architecture, experimental setup, and statistical analysis.
+
+The code was written using Python 3.x [reference] and the artificial neural networks were implemented using brian2 [reference].
+
+
 \subsection{Model}
 \label{sec:model}
 
-TODO
+A good model architecture provides a framework, which should be biologically plausible, but at the same time simple enough to have as few tunable parameters as possible, computationally inexpensive and easy to grasp. This framework should provide us with a "sandbox" environment, facilitating an easy way to design and test hypotheses.
+
+The base model was built with 4000 excitatory and 1000 inhibitory neurons. The connection probability between neurons was $p^{EE} = 0.2$ for excitatory and $p^{EI}, p^{IE}, p^{II} = 0.5$ for all connections involving an inhibitory neuron. 
+The strengths of the connection were $J^{EE} = 0.024, J^{IE} = 0.014, J^{EI} = -0.045$ and $J^{II} = -0.057$ ($J^{YX}$ denotes a connection from neuron group $X$ to neuron group $Y$.)
+
+
+Individual neuronal dynamics were set with the following equations:
+\begin{align}
+\dot V &= \frac{\mu - V}{\tau_m} + I_{\text{syn}} \\
+\dot I_{\text{syn}} &= \frac{x - I_{\text{syn}}}{\tau_2} \\
+\dot x &= -\frac{x}{\tau_1}
+\end{align}
+
+If neuron \textbf{a} and \textbf{b} have a connection $\mathbf{a} \to \mathbf{b}$, then in the event of neuron \textbf{a} firing, $x_b = x_b + \frac{J^{BA}}{\tau_1}$.
+
+The model used non-dimensional values in the simulations. 
+The parameters were set as follows:
+$\tau = 15ms$ for excitatory or $10ms$ for inhibitory neurons.
+$\tau_1 = 1ms$ for both neuron types
+$\Tau_2 = 3ms$ for excitatory or $2ms$ for inhibitory neurons.
+Spike threshold $V_{th} = 1$
+Reset potential $V_{re} = 0$
+Refractory period $r = 5ms$
+External input mu was sampled from a uniform distribution in the range $[1.1,1.2]$ for excitatory and $[1,1.05]$ for inhibitory neurons.
+Initial V was sampled from a uniform distribution in the range $[V_{re}, V_{th}]$
+
+Dimensionality was introduced only when plotting the figures – the parameters were multiplied by 15mV and transformed so that Vth = -50mV and Vre = -65mV.
+
+Integration was performed using the Euler method, with timestep dt = 0.1ms
+
+Introducing clustering
+Clusters were formed only between excitatory neurons. In a network with 4000 excitatory neurons, every cluster had 80 members. Clustering introduced two main changes to the network architecture: (1) the in-cluster connections were stronger (1.9x for our experiments); (2) Neurons had a higher chance of forming a synapse between a same-cluster counterpart. 
+
 
 \subsection{Analysis}
 \label{sec:analysis}
