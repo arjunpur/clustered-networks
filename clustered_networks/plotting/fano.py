@@ -85,3 +85,92 @@ def plot_fano_vs_ree(R_ee_values, mean_fano_factors, save_path=None):
         fig.savefig(save_path, dpi=300, bbox_inches="tight")
 
     return fig, ax
+
+
+def _validate_stimulus_curve_shapes(timepoints_s, *curves):
+    """Ensure stimulus Fano curves align with provided time axis."""
+    timepoints_s = np.asarray(timepoints_s)
+    if timepoints_s.ndim != 1:
+        raise ValueError(f"timepoints_s must be 1D, got shape {timepoints_s.shape}.")
+
+    for name, curve in curves:
+        arr = np.asarray(curve)
+        if arr.shape != timepoints_s.shape:
+            raise ValueError(
+                f"{name} must have shape {timepoints_s.shape}, got {arr.shape}."
+            )
+
+
+def plot_fano_stimulus_response(
+    timepoints_s,
+    clustered_mean,
+    clustered_lower,
+    clustered_upper,
+    uniform_mean,
+    uniform_lower,
+    uniform_upper,
+    title="Fano Factor Reaction to Higher Input Stimulus",
+    figsize=(8, 4.5),
+    save_path=None,
+):
+    """Plot Fano-factor response over time for elevated-input stimulus experiments."""
+    _validate_stimulus_curve_shapes(
+        timepoints_s,
+        ("clustered_mean", clustered_mean),
+        ("clustered_lower", clustered_lower),
+        ("clustered_upper", clustered_upper),
+        ("uniform_mean", uniform_mean),
+        ("uniform_lower", uniform_lower),
+        ("uniform_upper", uniform_upper),
+    )
+
+    timepoints_s = np.asarray(timepoints_s)
+    clustered_mean = np.asarray(clustered_mean)
+    clustered_lower = np.asarray(clustered_lower)
+    clustered_upper = np.asarray(clustered_upper)
+    uniform_mean = np.asarray(uniform_mean)
+    uniform_lower = np.asarray(uniform_lower)
+    uniform_upper = np.asarray(uniform_upper)
+
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.plot(
+        timepoints_s,
+        clustered_mean,
+        linewidth=1.5,
+        label="Clustered, 95% CI",
+        color="limegreen",
+    )
+    ax.fill_between(
+        timepoints_s,
+        clustered_lower,
+        clustered_upper,
+        alpha=0.25,
+        color="limegreen",
+    )
+    ax.plot(
+        timepoints_s,
+        uniform_mean,
+        linewidth=1.5,
+        label="Uniform, 95% CI",
+        color="black",
+    )
+    ax.fill_between(
+        timepoints_s,
+        uniform_lower,
+        uniform_upper,
+        alpha=0.25,
+        color="black",
+    )
+
+    ax.set_xlabel("Time (s)")
+    ax.set_ylabel("Fano Factor")
+    ax.set_title(title)
+    ax.grid(True, alpha=0.3)
+    ax.legend()
+
+    plt.tight_layout()
+
+    if save_path:
+        fig.savefig(save_path, dpi=300, bbox_inches="tight")
+
+    return fig, ax

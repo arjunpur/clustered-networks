@@ -152,7 +152,15 @@ def plot_correlation_same_cluster(
 
 
 def plot_correlation_tail(
-    spike_data, subset_size=500, corr_window=0.05, corr_step=0.025, seed=0
+    spike_data,
+    subset_size=500,
+    corr_window=0.05,
+    corr_step=0.025,
+    seed=0,
+    title="Correlation Tail Diagnostics: Same-Cluster vs Different-Cluster Pairs",
+    figsize=(12, 4.5),
+    show=True,
+    return_figure=False,
 ):
     """Plot correlation tail diagnostics: same-cluster vs different-cluster pairs.
 
@@ -162,9 +170,13 @@ def plot_correlation_tail(
         corr_window: Correlation window in seconds
         corr_step: Correlation step in seconds
         seed: Random seed
+        title: Optional figure title (None to omit)
+        figsize: Figure size tuple
+        show: Whether to call plt.show()
+        return_figure: Whether to return figure and axes along with neuron IDs
 
     Returns:
-        neuron_ids: The sampled neuron indices used for the analysis
+        neuron_ids by default, or (fig, axes, neuron_ids) if return_figure=True
     """
     results, neuron_ids = analyze_correlation_tail(
         spike_data,
@@ -178,7 +190,7 @@ def plot_correlation_tail(
     n_e = spike_data.model_params.N_E
 
     bins = np.linspace(-0.5, 1.0, 80)
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=figsize, sharey=True)
 
     axes[0].hist(
         results["Uniform"]["all"],
@@ -243,8 +255,14 @@ def plot_correlation_tail(
     axes[1].set_xlabel("Correlation coefficient")
     axes[1].legend()
 
-    plt.tight_layout()
-    plt.show()
+    if title:
+        fig.suptitle(title, y=1.03)
+        fig.tight_layout(rect=[0, 0, 1, 0.96])
+    else:
+        fig.tight_layout()
+
+    if show:
+        plt.show()
 
     def brief_stats(x):
         if x.size == 0:
@@ -280,5 +298,8 @@ def plot_correlation_tail(
             f"  r > {threshold:.1f}: same-cluster share = "
             f"{frac_same:.1%} ({same_count:,}/{all_count:,})"
         )
+
+    if return_figure:
+        return fig, axes, neuron_ids
 
     return neuron_ids

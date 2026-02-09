@@ -19,10 +19,11 @@
 % ============================================================================
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{flafter}            % Keep floats after their definition point
 \usepackage{booktabs}           % Professional tables
 \usepackage{subcaption}         % Subfigures
 \usepackage[font=small, labelfont=bf, labelsep=period]{caption}
-\usepackage{placeins}           % For \FloatBarrier
+\usepackage[section]{placeins}  % Auto-insert \FloatBarrier at section boundaries
 
 % Graphics path
 \graphicspath{{figures/}}
@@ -35,6 +36,9 @@
 \setcounter{topnumber}{3}
 \setcounter{bottomnumber}{3}
 \setcounter{totalnumber}{5}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
 
 % ============================================================================
 % Math and Science
@@ -77,6 +81,7 @@
         \thanks{$^{*}$Berlin Center for Computational Neuroscience;
         authors listed in alphabetical order}}
 \date{\today}
+\raggedbottom
 
 % ============================================================================
 % Document

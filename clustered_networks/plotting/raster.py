@@ -15,6 +15,9 @@ def plot_spike_raster(
     ax=None,
     color="gray",
     alpha=0.5,
+    markersize=2,
+    neuron_indices_e=None,
+    neuron_indices_i=None,
 ):
     """Plot a spike raster for excitatory (and optionally inhibitory) neurons.
 
@@ -26,6 +29,9 @@ def plot_spike_raster(
         ax: Matplotlib axes to plot on. If None, creates a new figure.
         color: Color for the dots (default: 'gray')
         alpha: Transparency for the dots (default: 0.5)
+        markersize: Dot size for spikes (default: 2)
+        neuron_indices_e: Optional neuron indices to include for excitatory spikes
+        neuron_indices_i: Optional neuron indices to include for inhibitory spikes
 
     Returns:
         The axes object
@@ -35,21 +41,35 @@ def plot_spike_raster(
     if ax is None:
         fig, ax = plt.subplots(figsize=(10, 7))
 
+    e_times = np.asarray(spike_monitor_e.t / ms)
+    e_ids = np.asarray(spike_monitor_e.i)
+    if neuron_indices_e is not None:
+        e_mask = np.isin(e_ids, np.asarray(neuron_indices_e))
+        e_times = e_times[e_mask]
+        e_ids = e_ids[e_mask]
+
     ax.plot(
-        spike_monitor_e.t / ms,
-        spike_monitor_e.i,
+        e_times,
+        e_ids,
         ".",
-        markersize=2,
+        markersize=markersize,
         color=color,
         alpha=alpha,
         label="E",
     )
     if spike_monitor_i is not None:
+        i_times = np.asarray(spike_monitor_i.t / ms)
+        i_ids = np.asarray(spike_monitor_i.i)
+        if neuron_indices_i is not None:
+            i_mask = np.isin(i_ids, np.asarray(neuron_indices_i))
+            i_times = i_times[i_mask]
+            i_ids = i_ids[i_mask]
+
         ax.plot(
-            spike_monitor_i.t / ms,
-            spike_monitor_i.i + n_e,
+            i_times,
+            i_ids + n_e,
             ".",
-            markersize=2,
+            markersize=markersize,
             color=color,
             alpha=alpha,
             label="I",
@@ -71,6 +91,9 @@ def plot_trial_rasters(
     save_path=None,
     color="gray",
     alpha=0.5,
+    neuron_fraction=0.5,
+    markersize=1.0,
+    seed=42,
 ):
     """Plot spike rasters for multiple trials of a network in a grid.
 
@@ -83,10 +106,16 @@ def plot_trial_rasters(
         save_path: Path to save the figure (optional)
         color: Color for the dots (default: 'gray')
         alpha: Transparency for the dots (default: 0.5)
+        neuron_fraction: Fraction of neurons to display (default: 0.5)
+        markersize: Dot size for spikes (default: 1.0)
+        seed: Random seed for neuron sampling (default: 42)
 
     Returns:
         (fig, axes): Matplotlib figure and axes
     """
+    if not 0 <= neuron_fraction <= 1:
+        raise ValueError("neuron_fraction must be between 0 and 1.")
+
     nrows = int(np.ceil(n_trials / ncols))
 
     if figsize is None:
@@ -94,6 +123,29 @@ def plot_trial_rasters(
 
     fig, axes = plt.subplots(nrows, ncols, figsize=figsize, sharex=True, sharey=True)
     axes = np.atleast_2d(axes)  # Ensure 2D array even if nrows=1
+
+    rng = np.random.default_rng(seed)
+    n_e_total = int(network.params.N_E)
+    n_e_plot = int(np.ceil(n_e_total * neuron_fraction))
+    if neuron_fraction > 0 and n_e_plot == 0 and n_e_total > 0:
+        n_e_plot = 1
+    selected_e = (
+        np.sort(rng.choice(n_e_total, size=n_e_plot, replace=False))
+        if n_e_plot > 0
+        else np.array([], dtype=int)
+    )
+
+    selected_i = None
+    if show_inhibitory:
+        n_i_total = int(network.params.N_I)
+        n_i_plot = int(np.ceil(n_i_total * neuron_fraction))
+        if neuron_fraction > 0 and n_i_plot == 0 and n_i_total > 0:
+            n_i_plot = 1
+        selected_i = (
+            np.sort(rng.choice(n_i_total, size=n_i_plot, replace=False))
+            if n_i_plot > 0
+            else np.array([], dtype=int)
+        )
 
     for trial in range(n_trials):
         row = trial // ncols
@@ -113,6 +165,9 @@ def plot_trial_rasters(
             ax=ax,
             color=color,
             alpha=alpha,
+            markersize=markersize,
+            neuron_indices_e=selected_e,
+            neuron_indices_i=selected_i,
         )
 
         # Only show legend on first plot to reduce clutter

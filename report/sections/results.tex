@@ -16,7 +16,7 @@ hundreds of milliseconds to seconds before switching, leading to slow rate
 dynamics and elevated trial-to-trial spike count variability (super-Poisson)
 compared to unclustered networks.
 
-\begin{figure}[!t]
+\begin{figure}[!htbp]
     \centering
     \begin{subfigure}[t]{\columnwidth}
         \centering
@@ -35,8 +35,7 @@ compared to unclustered networks.
     \label{fig:rasters}
 \end{figure}
 
-\FloatBarrier
-\subsubsection{Mean Rate}
+\subsection{Mean Rate}
 \label{sec:mean_rate}
 
 Despite the switching between high and low firing states, the clustered
@@ -47,7 +46,7 @@ activity epochs in clustered networks do not alter the overall mean firing
 rate; however, the firing rate distribution broadens somewhat, likely
 reflecting the alternation between high and low activity states.
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{firing_rate_distribution}
     \caption{Distribution of firing rates for excitatory neurons in uniform
@@ -58,7 +57,7 @@ reflecting the alternation between high and low activity states.
     \label{fig:firing_rates}
 \end{figure}
 
-\subsubsection{Variability}
+\subsection{Variability}
 \label{sec:variability}
 
 Neurons in the clustered network exhibit Fano factors greater than one
@@ -68,7 +67,7 @@ with the size of the counting window (Figure~\ref{fig:fano_vs_window}). This
 pattern illustrates the presence of slow firing rate variability in clustered
 networks---larger windows capture more of the slow rate fluctuations.
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{fano_factor_distribution}
     \caption{Distribution of Fano factors across neurons for uniform and
@@ -78,7 +77,7 @@ networks---larger windows capture more of the slow rate fluctuations.
     \label{fig:fano_distribution}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{fano_factor_vs_window}
     \caption{Mean Fano factor as a function of counting window size. In the
@@ -88,8 +87,7 @@ networks---larger windows capture more of the slow rate fluctuations.
     \label{fig:fano_vs_window}
 \end{figure}
 
-\FloatBarrier
-\subsubsection{Correlations}
+\subsection{Correlations}
 \label{sec:correlations}
 
 Pairwise spike count correlations remain near zero on average for both
@@ -103,7 +101,7 @@ simulation. Furthermore, this positive tail becomes increasingly pronounced
 as the counting window size increases (50~ms vs.\ 100~ms), as expected given
 that within-cluster neurons share these slow rate fluctuations.
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{correlation_all_pairs}
     \caption{Distribution of pairwise spike count correlations for all
@@ -112,7 +110,7 @@ that within-cluster neurons share these slow rate fluctuations.
     \label{fig:correlations_all}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{correlation_same_cluster}
     \caption{Distribution of pairwise spike count correlations for
@@ -121,8 +119,7 @@ that within-cluster neurons share these slow rate fluctuations.
     \label{fig:correlations_cluster}
 \end{figure}
 
-\FloatBarrier
-\subsubsection{Timescales}
+\subsection{Timescales}
 \label{sec:timescales}
 
 Clustered networks exhibit substantially longer correlation times than
@@ -130,18 +127,85 @@ unstructured networks. The autocovariance function decays much more slowly
 as a function of lag in clustered networks compared to their unstructured
 counterparts. Similarly, the cross-covariance for within-cluster neuron
 pairs decays slowly, indicating a shared correlated rate change among
-neurons belonging to the same cluster.
+neurons belonging to the same cluster (Figures~\ref{fig:autocovariance_timescales}
+and~\ref{fig:crosscovariance_timescales}).
+
+\begin{figure}[!htbp]
+    \centering
+    \IfFileExists{figures/autocovariance_comparison.pdf}{%
+        \includegraphics[width=\columnwidth]{autocovariance_comparison}%
+    }{%
+        \fbox{\parbox{0.95\columnwidth}{\centering
+        Autocovariance figure not found.\\
+        Generate figures before final compilation.}}%
+    }
+    \caption{Autocovariance as a function of lag for uniform and clustered
+    networks. The clustered network shows slower decay, indicating longer
+    intrinsic timescales.}
+    \label{fig:autocovariance_timescales}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \IfFileExists{figures/crosscovariance_comparison.pdf}{%
+        \includegraphics[width=\columnwidth]{crosscovariance_comparison}%
+    }{%
+        \fbox{\parbox{0.95\columnwidth}{\centering
+        Cross-covariance figure not found.\\
+        Generate figures before final compilation.}}%
+    }
+    \caption{Cross-covariance as a function of lag for uniform and clustered
+    networks. Within-cluster pairs in the clustered network show slower decay,
+    indicating stronger shared rate fluctuations.}
+    \label{fig:crosscovariance_timescales}
+\end{figure}
+
+\subsection{Stimulus-Dependent Variability}
+\label{sec:stimulus_variability}
+
+To probe how an external stimulus affects variability, we increased the
+input stimulus for one cluster and tracked the Fano factor over time. The
+clustered network shows a stronger time-dependent change in variability
+than the uniform network. During the stimulus, the clustered network shows 
+a dip in Fano Factor compared to the uniform network. This is consistent with the 
+original paper's finding of stimulus-quenched spiking variability. 
+
+(Figure~\ref{fig:fano_time_stimulus}).
+
+\begin{figure}[!htbp]
+    \centering
+    \IfFileExists{figures/fano_factor_higher_input_stimulus_response.pdf}{%
+        \includegraphics[width=\columnwidth]{fano_factor_higher_input_stimulus_response}%
+    }{%
+        \fbox{\parbox{0.95\columnwidth}{\centering
+        Time-dependent Fano-factor figure not found.\\
+        Generate figures before final compilation.}}%
+    }
+    \caption{Fano factor as a function of time under input stimulus. The
+    clustered network exhibits larger variability changes
+    over time than the uniform network.}
+    \label{fig:fano_time_stimulus}
+\end{figure}
 
 % ============================================================================
 % Critical Cluster Strength
 % ============================================================================
-\FloatBarrier
 \subsection{Critical Cluster Strength}
 \label{sec:critical_ree}
 
-TODO
+We experimented with networks of different connectivity strengths
+($R_{EE}$) and found a critical value above which spike-count
+trial-to-trial variability (i.e., Fano factor) increases. This is
+consistent with the original paper's finding. We tracked the Fano factor
+within a fixed time window (on a similar timescale to the switching
+dynamics) across several trials (random initial conditions) for a given
+network realization at each connectivity strength. With increasing
+connectivity strength, a cluster of neurons remains in a high-activity
+state for longer. As a result, across many trials, spike-count variability
+increases, because the analysis window for a cluster is increasingly
+dominated by a high-activity state (or not).
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=\columnwidth]{fano_factor_vs_ree}
     \caption{Mean Fano factor as a function of cluster strength ($R_{EE}$).
