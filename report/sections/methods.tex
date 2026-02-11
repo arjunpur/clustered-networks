@@ -45,9 +45,10 @@ Integration was performed using the Euler method, with timestep $dt = 0.1ms$
 When constructing the clustered network, clusters were formed only between excitatory neurons. In a network with 4000 excitatory neurons, every cluster had 80 members. Clustering introduced two main changes to the network architecture: (1) the in-cluster connections were stronger (1.9x for our experiments); (2) Neurons had a higher chance of forming a synapse between a same-cluster counterpart.
 
 The probability for forming excitatory connections inside clusters was set to $p_{in}^{EE}$, and to neurons in other clusters to $p_{out}^{EE}$. The probabilities were chosen such that the total average connection probability remained $p^{EE} = 0.2$. The ratio
-\[
+\begin{equation}
+\label{eq:ree_ratio}
 R^{EE} = \frac{p_{in}^{EE}}{p_{out}^{EE}}
-\]
+\end{equation}
 determines the level of clustering in the network. In our experiments, we used $R^{EE} = 2.5$ in the clustered networks.
 
 
@@ -57,21 +58,29 @@ determines the level of clustering in the network. In our experiments, we used $
 For understanding what kind of dynamics clustering introduces to neural networks, we ran parallel simulations on a uniformly connected network and a clustered network. The network was run for 3 seconds for all of our experiments. After simulations, the network behavior was analyzed using five key metrics: firing rate, Fano factor, correlation coefficients, autocorrelation, and cross-correlation. For the analysis, we discarded the first 1.5 seconds of the simulation and worked with the rest.
 
 Firing rate for neuron i was calculated as
-\[
+\begin{equation}
+\label{eq:rate_definition}
 r_i = \frac{N_i(t,t+\Delta t)}{\Delta t}
-\]
+\end{equation}
   where $N_i(t,t+\Delta t)$ is the spike count of neuron \textbf{i} in a time interval $[t, t+\Delta t]$.
 
 The Fano factor is a metric that captures spike variability. A Poisson process with a fixed underlying firing rate has a Fano factor of 1. Higher Fano factor values indicate a change in the neuron's underlying firing rate (for example, a transition from a low to a high firing rate state). The Fano factor for neuron \textbf{i} was calculated as 
-\[
-F_i = \frac{Var(N_i(t,t+\Delta t)}{\langle (N_i(t,t+\Delta t) \rangle}
-\]
+\begin{equation}
+\label{eq:fano_factor}
+F_i =
+\frac{\operatorname{Var}\big(N_i(t,t+\Delta t)\big)}
+{\langle N_i(t,t+\Delta t) \rangle}
+\end{equation}
 The variance and mean of a neuron were calculated over 9 trials, using $\Delta t = 100ms$ and $t_{start} = 1.5s$
 
 The correlation coefficients were calculated between neuron pairs. This metric tells us whether the spiking of two neurons is correlated or not. The correlation coefficient between neurons \textbf{i} and \textbf{j} was calculated as: 
-\[
-\rho_i = \frac{Cov(N_i(t,t+\Delta t), N_j(t,t+\Delta t)}{\sqrt{Var(N_i(t,t+\Delta t))Var(N_j(t,t+\Delta t))}}
-\]
+\begin{equation}
+\label{eq:correlation}
+\rho_i =
+\frac{\operatorname{Cov}\big(N_i(t,t+\Delta t), N_j(t,t+\Delta t)\big)}
+{\sqrt{\operatorname{Var}\big(N_i(t,t+\Delta t)\big)
+\operatorname{Var}\big(N_j(t,t+\Delta t)\big)}}
+\end{equation}
 Covariance and variance was calculated on overlapping windows within each trial and then averaged across the trials. In our experiments, we used $\Delta t = 50ms$ and $\Delta t = 100ms$ with a window step of $25ms$.
 
 \textcolor{red}{part about autocorrelation and cross-correlation}
