@@ -32,20 +32,20 @@ If neuron \textbf{a} and \textbf{b} have a connection $\mathbf{a} \to \mathbf{b}
 
 The model used non-dimensional values in the simulations. 
 The parameters were set as follows:
-$\tau = 15ms$ for excitatory or $10ms$ for inhibitory neurons.
-$\tau_1 = 1ms$ for both neuron types.
-$\tau_2 = 3ms$ for excitatory or $2ms$ for inhibitory neurons.
-Spike threshold $V_{th} = 1$
-Reset potential $V_{re} = 0$
-Refractory period $r = 5ms$
+$\tau_m = \SI{15}{\ms}$ for excitatory or $\SI{10}{\ms}$ for inhibitory neurons.
+$\tau_1 = \SI{1}{\ms}$ for both neuron types.
+$\tau_2 = \SI{3}{\ms}$ for excitatory or $\SI{2}{\ms}$ for inhibitory neurons.
+Spike threshold $V_{th} = 1$.
+Reset potential $V_{re} = 0$.
+Refractory period $r = \SI{5}{\ms}$.
 External input $\mu$ was sampled from a uniform distribution in the range $[1.1,1.2]$ for excitatory and $[1,1.05]$ for inhibitory neurons.
-The initial $V$ was sampled from a uniform distribution in the range $[V_{re}, V_{th}]$
+The initial $V$ was sampled from a uniform distribution in the range $[V_{re}, V_{th}]$.
 
-Dimensionality was introduced only when plotting the figures – the parameters were multiplied by $15mV$ and transformed so that $V_{th} = -50mV$ and $V_{re} = -65mV$.
+Dimensionality was introduced only when plotting the figures -- the parameters were multiplied by $\SI{15}{\mV}$ and transformed so that $V_{th} = \SI{-50}{\mV}$ and $V_{re} = \SI{-65}{\mV}$.
 
-Integration was performed using the Euler method, with timestep $dt = 0.1ms$
+Integration was performed using the Euler method, with timestep $dt = \SI{0.1}{\ms}$.
 
-When constructing the clustered network, clusters were formed only between excitatory neurons. In a network with 4000 excitatory neurons, every cluster had 80 members. Clustering introduced two main changes to the network architecture: (1) the in-cluster connections were stronger (1.9x for our experiments); (2) Neurons had a higher chance of forming a synapse between a same-cluster counterpart.
+When constructing the clustered network, clusters were formed only between excitatory neurons. In a network with 4000 excitatory neurons, every cluster had 80 members. Clustering introduced two main changes to the network architecture: (1) the within-cluster synaptic weights were scaled by a factor of 1.9, i.e., $J_{\text{in}}^{EE} = 1.9 \times J^{EE}$; (2) neurons had a higher probability of forming a synapse with a same-cluster counterpart.
 
 The probability for forming excitatory connections inside clusters was set to $p_{in}^{EE}$, and to neurons in other clusters to $p_{out}^{EE}$. The probabilities were chosen such that the total average connection probability remained $p^{EE} = 0.2$. The ratio
 \begin{equation}
@@ -58,7 +58,7 @@ determines the level of clustering in the network. In our experiments, we used $
 \subsection{Analysis}
 \label{sec:analysis}
 
-For understanding what kind of dynamics clustering introduces to neural networks, we ran parallel simulations on a uniformly connected network and a clustered network. The network was run for 3 seconds for all of our experiments. After simulations, the network behavior was analyzed using five key metrics: firing rate, Fano factor, correlation coefficients, autocorrelation, and cross-correlation. For the analysis, we discarded the first 1.5 seconds of the simulation and worked with the rest.
+For understanding what kind of dynamics clustering introduces to neural networks, we ran parallel simulations on a uniformly connected network and a clustered network. The network was run for \SI{3}{\s} for all of our experiments. After simulations, the network behavior was analyzed using five key metrics: firing rate, Fano factor, correlation coefficients, autocorrelation, and cross-correlation. For the analysis, we discarded the first \SI{1.5}{\s} of the simulation and worked with the rest.
 
 Firing rate for neuron i was calculated as
 \begin{equation}
@@ -71,16 +71,16 @@ The Fano factor is a metric that captures spike variability. A Poisson process w
 \[
 F_i = \frac{Var(N_i(t,t+\Delta t))}{\langle N_i(t,t+\Delta t)\rangle}
 \]
-The variance and mean of a neuron were calculated over 9 trials, using $\Delta t = 100ms$ and $t_{start} = 1.5s$
+The variance and mean of a neuron were calculated over 9 trials, using $\Delta t = \SI{100}{\ms}$ and $t_{start} = \SI{1.5}{\s}$.
 
 The correlation coefficients were calculated between neuron pairs. This metric tells us whether the spiking of two neurons is correlated or not. The correlation coefficient between neurons \textbf{i} and \textbf{j} was calculated as: 
 \[
 \rho_{ij} = \frac{Cov(N_i(t,t+\Delta t), N_j(t,t+\Delta t))}{\sqrt{Var(N_i(t,t+\Delta t))Var(N_j(t,t+\Delta t))}}
 \]
-Covariance and variance was calculated on overlapping windows within each trial and then averaged across the trials. In our experiments, we used $\Delta t = 50ms$ and $\Delta t = 100ms$ with a window step of $25ms$.
+Covariance and variance was calculated on overlapping windows within each trial and then averaged across the trials. In our experiments, we used $\Delta t = \SI{50}{\ms}$ and $\Delta t = \SI{100}{\ms}$ with a window step of $\SI{25}{\ms}$.
 
-For autocovariance and cross-covariance analysis, spikes were binned in 2~ms bins over the same post-transient analysis window (1.5--3.0~s). We computed centered spike-count rates and evaluated covariance as a function of lag. Autocovariance was averaged across neurons, while cross-covariance was averaged across sampled neuron pairs (all pairs for the uniform network and within-cluster pairs for the clustered network), then averaged across trials and realizations.
+For autocovariance and cross-covariance analysis, spikes were binned in \SI{2}{\ms} bins over the same post-transient analysis window (\SIrange{1.5}{3.0}{\s}). We computed centered spike-count rates and evaluated covariance as a function of lag. Autocovariance was averaged across neurons, while cross-covariance was averaged across sampled neuron pairs (all pairs for the uniform network and within-cluster pairs for the clustered network), then averaged across trials and realizations.
 
 To evaluate the effect of cluster strength, we varied $R_{EE}$ and computed the corresponding mean Fano factor for each value from repeated simulations. The same Fano-factor pipeline was used, and results were summarized by averaging across excitatory neurons and trials to produce the Fano-factor-versus-$R_{EE}$ curve.
 
-Finally, we investigated how changing the input stimulus $\mu$ influences the network dynamics. For this, we raised the stimulus by a multiplier of 2x for the first cluster (80 neurons). The effect of elevated stimulus on the network was analyzed by calculating the Fano factor over 9 trials as before, but it was calculated for overlapping windows of $250ms$, with a shift of $30ms$, resulting in a time-dependent function for the Fano factor.
+Finally, we investigated how changing the input stimulus $\mu$ influences the network dynamics. For this, we raised the stimulus by a multiplier of 2x for the first cluster (80 neurons). The effect of elevated stimulus on the network was analyzed by calculating the Fano factor over 9 trials as before, but it was calculated for overlapping windows of $\SI{250}{\ms}$, with a shift of $\SI{30}{\ms}$, resulting in a time-dependent function for the Fano factor.

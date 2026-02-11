@@ -132,13 +132,7 @@ and~\ref{fig:crosscovariance_timescales}).
 
 \begin{figure}[!htbp]
     \centering
-    \IfFileExists{figures/autocovariance_comparison.pdf}{%
-        \includegraphics[width=\columnwidth]{autocovariance_comparison}%
-    }{%
-        \fbox{\parbox{0.95\columnwidth}{\centering
-        Autocovariance figure not found.\\
-        Generate figures before final compilation.}}%
-    }
+    \includegraphics[width=\columnwidth]{autocovariance_comparison}
     \caption{Autocovariance as a function of lag for uniform and clustered
     networks. The clustered network shows slower decay, indicating longer
     intrinsic timescales.}
@@ -147,13 +141,7 @@ and~\ref{fig:crosscovariance_timescales}).
 
 \begin{figure}[!htbp]
     \centering
-    \IfFileExists{figures/crosscovariance_comparison.pdf}{%
-        \includegraphics[width=\columnwidth]{crosscovariance_comparison}%
-    }{%
-        \fbox{\parbox{0.95\columnwidth}{\centering
-        Cross-covariance figure not found.\\
-        Generate figures before final compilation.}}%
-    }
+    \includegraphics[width=\columnwidth]{crosscovariance_comparison}
     \caption{Cross-covariance as a function of lag for uniform and clustered
     networks. Within-cluster pairs in the clustered network show slower decay,
     indicating stronger shared rate fluctuations.}
@@ -175,15 +163,9 @@ original paper's finding of stimulus-quenched spiking variability.
 
 \begin{figure}[!htbp]
     \centering
-    \IfFileExists{figures/stimulation_combined_3x2.pdf}{%
-        \includegraphics[width=\columnwidth]{stimulation_combined_3x2}%
-    }{%
-        \fbox{\parbox{0.95\columnwidth}{\centering
-        Time-dependent Fano-factor figure not found.\\
-        Generate figures before final compilation.}}%
-    }
+    \includegraphics[width=\columnwidth]{stimulation_combined_3x2}
     \caption{Effect of stimulus on network dynamics. \textbf{(a)} Clustered network activity with increased stimulus on the first cluster (first 80 neurons). \textbf{(b)} Increased stimulation on the first cluster, uniform network. \textbf{(c)} Fano factor as a function of time under input stimulus. The clustered network exhibits larger variability changes
-    over time than the uniform network. \textbf{(c)} Fano factor only in the stimulated cluster, only outside the cluster.}
+    over time than the uniform network. \textbf{(d)} Fano factor only in the stimulated cluster, only outside the cluster.}
     \label{fig:fano_time_stimulus}
 \end{figure}
 
