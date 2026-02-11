@@ -20,9 +20,12 @@ The strengths of the connections were $J^{EE} = 0.024, J^{IE} = 0.014, J^{EI} = 
 
 Individual neuronal dynamics were set with the following equations:
 \begin{align}
-\dot V &= \frac{\mu - V}{\tau_m} + I_{\text{syn}} \\
-\dot I_{\text{syn}} &= \frac{x - I_{\text{syn}}}{\tau_2} \\
+\dot V &= \frac{\mu - V}{\tau_m} + I_{\text{syn}}
+\label{eq:membrane_voltage} \\
+\dot I_{\text{syn}} &= \frac{x - I_{\text{syn}}}{\tau_2}
+\label{eq:synaptic_current_dynamics} \\
 \dot x &= -\frac{x}{\tau_1}
+\label{eq:auxiliary_variable}
 \end{align}
 
 If neuron \textbf{a} and \textbf{b} have a connection $\mathbf{a} \to \mathbf{b}$, then in the event of neuron \textbf{a} firing, $x_b = x_b + \frac{J^{BA}}{\tau_1}$.

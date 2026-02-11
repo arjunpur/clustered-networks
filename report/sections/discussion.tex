@@ -24,6 +24,37 @@ To understand how successful our replication of the original paper was, Figure~\
 
 From this comparison, we see that most of the statistical analyses are very similar. The most fundamental difference is between Figure~\ref{fig:our_results} \textbf{(d)} and Figure~\ref{fig:original_results} \textbf{(d)}. From our experiment, the correlation coefficient figure displays a long heavy tail, with a significant bump around the 0.8 mark, while the original paper displayed a gradually diminishing positive tail, having almost no coefficients at 0.8.
 
-Although it is hard to know exactly the firing dynamics of the network in the original paper, we can still guess the possible explanation for this difference. In our clustered network, neurons that entered the high activity state (high firing-rate), exhibited regular inter-spike intervals. These neurons were also firing very synchronously with the rest of its cluster. As the correlation coefficient calculation used window sizes of 50ms (\eqref{eq:correlation}), it can be expected that a cluster that is currently in the active state produces a very high correlation.
+Although it is hard to know exactly the firing dynamics of the network in the original paper, we can still guess the possible explanation for this difference. In our clustered network, neurons that entered the high activity state (high firing-rate), exhibited regular inter-spike intervals. These neurons were also firing very synchronously with the rest of its cluster (Figure~\ref{fig:our_results}). As the correlation coefficient calculation used window sizes of 50ms (Equation~\eqref{eq:correlation}), it can be expected that a cluster that is currently in the active state produces a very high correlation.
 
-Therefore the difference in our results and the original could lie in differences in network dynamics. It is possible that clusters in the original paper showed less synchrony when in the active (high firing-rate state).
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{report/figures/high_corr_firing.png}
+    \caption{Spiking of two neurons in the same cluster. These neurons were sorted by their high correlation coefficient. We can see that both of the neurons are actively firing around 2.6 - 2.9 second interval, having highly synchronous spikes.}
+    \label{fig:high_corr_firing}
+\end{figure}
+
+Therefore, the difference in our results and the original could lie in differences in network dynamics. It is possible that clusters in the original paper showed less synchrony when in the active (high firing-rate) state.
+
+Another important difference is the fact, that we had to convert the equations from the original paper to a different form. While our neurons behaved according to Equations \eqref{eq:membrane_voltage}, \eqref{eq:synaptic_current_dynamics}, and \eqref{eq:auxiliary_variable}, the synaptic current for neuron i in population x in the original paper was calculated as: 
+
+\[
+I_{i,\mathrm{syn}}^{x}(t)
+=
+\sum_{j,y}
+J_{ij}^{xy}\, F^{y} \ast \, s_{j}^{y}(t)
+\]
+
+where the index j denotes the presynaptic neuron, y is the presynaptic neuron group, J is the synaptic strength, F is a synaptic filter and $s_{j}$ is the presynaptic spike train. The synaptic filter F(t) was defined as: 
+
+\[
+F^{y}(t)
+=
+\frac{1}{\tau_2 - \tau_1}
+\left(
+e^{-t/\tau_2}
+-
+e^{-t/\tau_1}
+\right)
+\]
+
+Otherwise, our results coincided with the results from the original paper quite well. With our experiments, we confirmed the phenomenon that clusters can influence the default asynchronous network dynamics by introducing new attractor states and slow dynamics.
