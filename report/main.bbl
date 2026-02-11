@@ -7,14 +7,11 @@
 
 \bibitem[Litwin-Kumar and Doiron(2012)]{litwin2012slow}
 Ashok Litwin-Kumar and Brent Doiron.
-\newblock Slow dynamics and high variability in balanced cortical networks with
-  clustered connections.
-\newblock \emph{Nature Neuroscience}, 15\penalty0 (11):\penalty0 1498--1505,
-  2012.
+\newblock Slow dynamics and high variability in balanced cortical networks with clustered connections.
+\newblock \emph{Nature Neuroscience}, 15\penalty0 (11):\penalty0 1498--1505, 2012.
 \newblock \doi{10.1038/nn.3220}.
 
-\bibitem[Stimberg et~al.(2019)Stimberg, Brette, and
-  Goodman]{stimberg2019brian2}
+\bibitem[Stimberg et~al.(2019)Stimberg, Brette, and Goodman]{stimberg2019brian2}
 Marcel Stimberg, Romain Brette, and Dan~FM Goodman.
 \newblock Brian 2, an intuitive and efficient neural simulator.
 \newblock \emph{eLife}, 8:\penalty0 e47314, 2019.
