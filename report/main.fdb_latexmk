@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1770841019.38056 "main.aux" "main.bbl" "main" 1770841020.73334 0
+["bibtex main"] 1770841800.2411 "main.aux" "main.bbl" "main" 1770841801.69198 0
   "./references.bib" 1769711578.60405 1249 9b93eb1697c5b575747836cae7dec164 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1770841020.43632 11112 81db1530c4f69aecbc47221833442d9d "pdflatex"
+  "main.aux" 1770841801.42721 11298 3b3816adc625e0a8c535a5ba67dbebb5 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1770841019.50342 "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" "main.pdf" "main" 1770841020.73349 0
-  "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" 1770841017.75565 4183 4dc26368110a5e99f99d11e0fa74f571 ""
+["pdflatex"] 1770841800.35304 "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" "main.pdf" "main" 1770841801.69217 0
+  "/Users/arjun/Projects/bccn/clustered-networks/report/main.tex" 1770841797.24909 4247 100a0b3b3337bc6c0119d12290aef2b6 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -125,7 +125,11 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty" 1670275497 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty" 1740687122 340829 1b2c1d1f1f03e683fab4091869acffd3 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty" 1736023606 48766 87a17a4ef312a39cd43896e34a679a56 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty" 1730496337 14552 27664839421e418b87f56fa4c6f66b1a ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl" 1644096163 5588 0c1628daf15f4411ff1f463114c634a3 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations.sty" 1644096163 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1752442020 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
@@ -145,15 +149,15 @@
   "figures/rasters_clustered.pdf" 1770643992.89549 574461 ec691c4426f680c698815cd8b4012e01 ""
   "figures/rasters_uniform.pdf" 1770643992.01181 342757 0ce1cbdc5d7d3e482e12e31e29268bc1 ""
   "figures/stimulation_combined_3x2.pdf" 1770819293.72764 575425 90612b24565108892d663e8beae6b6cf ""
-  "main.aux" 1770841020.43632 11112 81db1530c4f69aecbc47221833442d9d "pdflatex"
-  "main.bbl" 1770841019.50026 836 9cda7337ff297b26cf0daf7854ad3879 "bibtex main"
-  "main.out" 1770841020.43755 1648 c1d856a2f57d0635db1ad20a699b9940 "pdflatex"
-  "main.tex" 1770841017.75565 4183 4dc26368110a5e99f99d11e0fa74f571 ""
+  "main.aux" 1770841801.42721 11298 3b3816adc625e0a8c535a5ba67dbebb5 "pdflatex"
+  "main.bbl" 1770841800.35063 1361 9ff0911b6b8503c3aa101741b755738b "bibtex main"
+  "main.out" 1770841801.42843 1648 c1d856a2f57d0635db1ad20a699b9940 "pdflatex"
+  "main.tex" 1770841797.24909 4247 100a0b3b3337bc6c0119d12290aef2b6 ""
   "sections/abstract.tex" 1770825545.95168 1172 6f9fe0e62d10192ff74b0a07c3b04b4b ""
-  "sections/discussion.tex" 1770839247.11903 4187 2d7a18858b6956654bdba893ab9d48c3 ""
-  "sections/introduction.tex" 1770130738.47825 1281 1c3cd382ac249b29ee8d4d8928454d33 ""
-  "sections/methods.tex" 1770838571.33609 6798 4dda11dfe570ea88b1cb7a685528fffe ""
-  "sections/results.tex" 1770825534.28538 9860 95ba089df74c09d0e48a5e168ff09adc ""
+  "sections/discussion.tex" 1770841746.84956 4187 2d7a18858b6956654bdba893ab9d48c3 ""
+  "sections/introduction.tex" 1770841746.79338 1331 fb82129d7ab1db76eb3c30595408b949 ""
+  "sections/methods.tex" 1770841746.79392 7011 be994a390df9cb2e1fca180cc934f38e ""
+  "sections/results.tex" 1770841746.79465 9168 95d2ad7b5fe3edcc5d2f9a5507423ad2 ""
   (generated)
   "main.aux"
   "main.log"

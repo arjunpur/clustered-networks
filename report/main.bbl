@@ -1,9 +1,14 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brunel(2000)]{brunel2000dynamics}
+Nicolas Brunel.
+\newblock Dynamics of sparsely connected networks of excitatory and inhibitory spiking neurons.
+\newblock \emph{Journal of Computational Neuroscience}, 8\penalty0 (3):\penalty0 183--208, 2000.
 
 \bibitem[Litwin-Kumar and Doiron(2012)]{litwin2012slow}
 Ashok Litwin-Kumar and Brent Doiron.
@@ -15,5 +20,10 @@ Ashok Litwin-Kumar and Brent Doiron.
 Marcel Stimberg, Romain Brette, and Dan~FM Goodman.
 \newblock Brian 2, an intuitive and efficient neural simulator.
 \newblock \emph{eLife}, 8:\penalty0 e47314, 2019.
+
+\bibitem[van Vreeswijk and Sompolinsky(1996)]{vanvreeswijk1996chaos}
+Carl van Vreeswijk and Haim Sompolinsky.
+\newblock Chaos in neuronal networks with balanced excitatory and inhibitory activity.
+\newblock \emph{Science}, 274\penalty0 (5293):\penalty0 1724--1726, 1996.
 
 \end{thebibliography}
