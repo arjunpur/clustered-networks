@@ -6,7 +6,7 @@
 
 Our aim in this project was to study how clusters in an artificial neural network model influence its dynamics. For clarity, we divide this goal into three main parts: model architecture, experimental setup, and statistical analysis.
 
-The code was written using Python 3.13\footnote{https://www.python.org} and the artificial neural networks were implemented using Brian2\footnote{https://brian2.readthedocs.io} .
+The code was written using Python 3.13\footnote{https://www.python.org} and the artificial neural networks were implemented using Brian2~\citep{stimberg2019brian2}\footnote{https://brian2.readthedocs.io}.
 
 
 \subsection{Model}
@@ -64,17 +64,18 @@ r_i = \frac{N_i(t,t+\Delta t)}{\Delta t}
 
 The Fano factor is a metric that captures spike variability. A Poisson process with a fixed underlying firing rate has a Fano factor of 1. Higher Fano factor values indicate a change in the neuron's underlying firing rate (for example, a transition from a low to a high firing rate state). The Fano factor for neuron \textbf{i} was calculated as 
 \[
-F_i = \frac{Var(N_i(t,t+\Delta t)}{\langle (N_i(t,t+\Delta t) \rangle}
+F_i = \frac{Var(N_i(t,t+\Delta t))}{\langle N_i(t,t+\Delta t)\rangle}
 \]
 The variance and mean of a neuron were calculated over 9 trials, using $\Delta t = 100ms$ and $t_{start} = 1.5s$
 
 The correlation coefficients were calculated between neuron pairs. This metric tells us whether the spiking of two neurons is correlated or not. The correlation coefficient between neurons \textbf{i} and \textbf{j} was calculated as: 
 \[
-\rho_i = \frac{Cov(N_i(t,t+\Delta t), N_j(t,t+\Delta t)}{\sqrt{Var(N_i(t,t+\Delta t))Var(N_j(t,t+\Delta t))}}
+\rho_{ij} = \frac{Cov(N_i(t,t+\Delta t), N_j(t,t+\Delta t))}{\sqrt{Var(N_i(t,t+\Delta t))Var(N_j(t,t+\Delta t))}}
 \]
 Covariance and variance was calculated on overlapping windows within each trial and then averaged across the trials. In our experiments, we used $\Delta t = 50ms$ and $\Delta t = 100ms$ with a window step of $25ms$.
 
-\textcolor{red}{part about autocorrelation and cross-correlation}
-\textcolor{red}{part about fano factor vs change in $R_{EE}$}
+For autocovariance and cross-covariance analysis, spikes were binned in 2~ms bins over the same post-transient analysis window (1.5--3.0~s). We computed centered spike-count rates and evaluated covariance as a function of lag. Autocovariance was averaged across neurons, while cross-covariance was averaged across sampled neuron pairs (all pairs for the uniform network and within-cluster pairs for the clustered network), then averaged across trials and realizations.
+
+To evaluate the effect of cluster strength, we varied $R_{EE}$ and computed the corresponding mean Fano factor for each value from repeated simulations. The same Fano-factor pipeline was used, and results were summarized by averaging across excitatory neurons and trials to produce the Fano-factor-versus-$R_{EE}$ curve.
 
 Finally, we investigated how changing the input stimulus $\mu$ influences the network dynamics. For this, we raised the stimulus by a multiplier of 2x for the first cluster (80 neurons). The effect of elevated stimulus on the network was analyzed by calculating the Fano factor over 9 trials as before, but it was calculated for overlapping windows of $250ms$, with a shift of $30ms$, resulting in a time-dependent function for the Fano factor.

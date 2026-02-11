@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  9 FEB 2026 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  11 FEB 2026 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -565,57 +565,62 @@ Package pdftex.def Info: figures/fano_factor_vs_window.pdf  used on input line 8
 (pdftex.def)             Requested size: 235.51768pt x 160.85408pt.
 
 
-<figures/correlation_all_pairs.pdf, id=101, 382.17468pt x 339.77565pt>
-File: figures/correlation_all_pairs.pdf Graphic file (type pdf)
-<use figures/correlation_all_pairs.pdf>
-Package pdftex.def Info: figures/correlation_all_pairs.pdf  used on input line 106.
-(pdftex.def)             Requested size: 235.51768pt x 209.3885pt.
-<figures/correlation_same_cluster.pdf, id=102, 397.98375pt x 339.77565pt>
-File: figures/correlation_same_cluster.pdf Graphic file (type pdf)
-<use figures/correlation_same_cluster.pdf>
-Package pdftex.def Info: figures/correlation_same_cluster.pdf  used on input line 115.
-(pdftex.def)             Requested size: 235.51768pt x 201.07767pt.
-<figures/autocovariance_comparison.pdf, id=105, 460.55614pt x 316.2101pt>
+<figures/corr_all.png, id=101, 433.62pt x 361.35pt>
+File: figures/corr_all.png Graphic file (type png)
+<use figures/corr_all.png>
+Package pdftex.def Info: figures/corr_all.png  used on input line 106.
+(pdftex.def)             Requested size: 235.51768pt x 196.26744pt.
+<figures/corr_same.png, id=103, 433.62pt x 361.35pt>
+File: figures/corr_same.png Graphic file (type png)
+<use figures/corr_same.png>
+Package pdftex.def Info: figures/corr_same.png  used on input line 115.
+(pdftex.def)             Requested size: 235.51768pt x 196.26744pt.
+<figures/autocovariance_comparison.pdf, id=106, 460.55614pt x 316.2101pt>
 File: figures/autocovariance_comparison.pdf Graphic file (type pdf)
 <use figures/autocovariance_comparison.pdf>
 Package pdftex.def Info: figures/autocovariance_comparison.pdf  used on input line 141.
 (pdftex.def)             Requested size: 235.51768pt x 161.70409pt.
-<figures/crosscovariance_comparison.pdf, id=106, 460.43692pt x 316.2101pt>
+<figures/crosscovariance_comparison.pdf, id=107, 460.43692pt x 316.2101pt>
 File: figures/crosscovariance_comparison.pdf Graphic file (type pdf)
 <use figures/crosscovariance_comparison.pdf>
 Package pdftex.def Info: figures/crosscovariance_comparison.pdf  used on input line 156.
 (pdftex.def)             Requested size: 235.51768pt x 161.74751pt.
 
 
-[2 <./figures/firing_rate_distribution.pdf> <./figures/fano_factor_distribution.pdf> <./figures/fano_factor_vs_window.pdf> <./figures/correlation_all_pairs.pdf>]
+[2 <./figures/firing_rate_distribution.pdf> <./figures/fano_factor_distribution.pdf> <./figures/fano_factor_vs_window.pdf> <./figures/corr_all.png>]
 
-<figures/fano_factor_higher_input_stimulus_response.pdf, id=152, 576.78873pt x 284.74379pt>
-File: figures/fano_factor_higher_input_stimulus_response.pdf Graphic file (type pdf)
-<use figures/fano_factor_higher_input_stimulus_response.pdf>
-Package pdftex.def Info: figures/fano_factor_higher_input_stimulus_response.pdf  used on input line 183.
-(pdftex.def)             Requested size: 235.51768pt x 116.26778pt.
-<figures/fano_factor_vs_ree.pdf, id=153, 566.44313pt x 348.82445pt>
+<figures/stimulation_combined_3x2.pdf, id=146, 844.86575pt x 616.57225pt>
+File: figures/stimulation_combined_3x2.pdf Graphic file (type pdf)
+<use figures/stimulation_combined_3x2.pdf>
+Package pdftex.def Info: figures/stimulation_combined_3x2.pdf  used on input line 184.
+(pdftex.def)             Requested size: 235.51768pt x 171.87698pt.
+<figures/fano_factor_vs_ree.pdf, id=147, 566.44313pt x 348.82445pt>
 File: figures/fano_factor_vs_ree.pdf Graphic file (type pdf)
 <use figures/fano_factor_vs_ree.pdf>
 Package pdftex.def Info: figures/fano_factor_vs_ree.pdf  used on input line 210.
 (pdftex.def)             Requested size: 235.51768pt x 145.03622pt.
-) (./sections/discussion.tex) (./sections/methods.tex
+) (./sections/discussion.tex
 
-[3 <./figures/correlation_same_cluster.pdf> <./figures/autocovariance_comparison.pdf> <./figures/crosscovariance_comparison.pdf> <./figures/fano_factor_higher_input_stimulus_response.pdf> <./figures/fano_factor_vs_ree.pdf>]
+[3 <./figures/corr_same.png> <./figures/autocovariance_comparison.pdf> <./figures/crosscovariance_comparison.pdf> <./figures/stimulation_combined_3x2.pdf>]
+<figures/our_results.png, id=303, 1771.61874pt x 760.8425pt>
+File: figures/our_results.png Graphic file (type png)
+<use figures/our_results.png>
+Package pdftex.def Info: figures/our_results.png  used on input line 13.
+(pdftex.def)             Requested size: 235.51768pt x 101.14201pt.
+<figures/original_results.jpg, id=304, 1376.14125pt x 709.65125pt>
+File: figures/original_results.jpg Graphic file (type jpg)
+<use figures/original_results.jpg>
+Package pdftex.def Info: figures/original_results.jpg  used on input line 20.
+(pdftex.def)             Requested size: 235.51768pt x 121.45123pt.
 
-)
 
-[4] (./main.bbl
+) (./sections/methods.tex
 
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
+[4 <./figures/fano_factor_vs_ree.pdf> <./figures/our_results.png> <./figures/original_results.jpg>]
 
-)
+) (./main.bbl)
 
-
-
-[5
-
-] (./main.aux)
+[5] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -624,18 +629,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C1D856A2F57D0635DB1AD20A699B9940;1648.
  ) 
 Here is how much of TeX's memory you used:
- 15440 strings out of 473190
- 245736 string characters out of 5715801
- 681458 words of memory out of 5000000
- 38100 multiletter control sequences out of 15000+600000
- 621484 words of font info for 339 fonts, out of 8000000 for 9000
+ 15526 strings out of 473190
+ 246723 string characters out of 5715801
+ 679080 words of memory out of 5000000
+ 38143 multiletter control sequences out of 15000+600000
+ 624092 words of font info for 364 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,1054b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (5 pages, 1202444 bytes).
+Output written on main.pdf (5 pages, 2009042 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 79520 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 83626 words of extra memory for PDF output out of 89155 (max. 10000000)
 
